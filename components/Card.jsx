@@ -8,14 +8,9 @@ import { router } from "expo-router";
 
 const btns = [
   {
-    txt: "جلسة عامة",
-    backgroundColor: "#C0E5D1",
-    color: "#47B881",
-  },
-  {
-    txt: "جلسة سريعة جداً",
-    backgroundColor: "#FFEAB3",
-    color: "#FFAD0D",
+    txt: "جلسة ودية",
+    backgroundColor: "#FFCCD2",
+    color: "#F64C4C",
   },
   {
     txt: "جلسة ثابتة",
@@ -23,9 +18,14 @@ const btns = [
     color: "#5493EF",
   },
   {
-    txt: "جلسة ودية",
-    backgroundColor: "#FFCCD2",
-    color: "#F64C4C",
+    txt: "جلسة سريعة جداً",
+    backgroundColor: "#FFEAB3",
+    color: "#FFAD0D",
+  },
+  {
+    txt: "جلسة عامة",
+    backgroundColor: "#C0E5D1",
+    color: "#47B881",
   },
 ];
 
@@ -84,7 +84,7 @@ const Card = ({ isLast, i }) => {
       }}
       className="bg-[#262B33] rounded-2xl py-4 px-2"
     >
-      <View className="bg-[#39404D] rounded-lg p-2 flex flex-row space-x-2 mb-3">
+      <View className="bg-[#39404D] rounded-lg p-2 flex flex-row justify-end space-x-2 mb-3">
         {btns.map(({ txt, backgroundColor, color }, j) => (
           <TouchableOpacity
             key={j}
@@ -107,9 +107,9 @@ const Card = ({ isLast, i }) => {
       </View>
       <View className="flex flex-row">
         <Team
-          teamIndex={0}
-          completed={firstTeam.length == 2}
-          team={firstTeam}
+          teamIndex={1}
+          completed={secondTeam.length == 2}
+          team={secondTeam}
           i={i}
         />
         <View className="mx-[17px] flex justify-between space-y-2">
@@ -148,14 +148,14 @@ const Card = ({ isLast, i }) => {
             activeOpacity={0.9}
             className="bg-[#4D5666] rounded-lg w-[98px] h-[28px] flex justify-center items-center flex-row space-x-2"
           >
-            <Feather name="eye" size={16} color="#F2BE72" />
             <Text className="font-abold text-xs text-[#F2BE72]">شاهد</Text>
+            <Feather name="eye" size={16} color="#F2BE72" />
           </TouchableOpacity>
         </View>
         <Team
-          teamIndex={1}
-          completed={secondTeam.length == 2}
-          team={secondTeam}
+          teamIndex={0}
+          completed={firstTeam.length == 2}
+          team={firstTeam}
           i={i}
         />
       </View>
@@ -171,7 +171,7 @@ const Team = ({ teamIndex, completed, team, i }) => {
       <Text
         className="text-white font-abold text-xs mb-2"
         style={{
-          textAlign: teamIndex ? "right" : "left",
+          textAlign: teamIndex ? "left" : "right",
         }}
       >
         {teams[teamIndex]}
@@ -182,7 +182,7 @@ const Team = ({ teamIndex, completed, team, i }) => {
             key={i}
             className="flex items-center justify-between"
             style={{
-              flexDirection: teamIndex ? "row-reverse" : "row",
+              flexDirection: teamIndex ? "row" : "row-reverse",
             }}
           >
             <BGText

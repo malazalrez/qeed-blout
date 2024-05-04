@@ -60,7 +60,20 @@ const Status = () => {
               </InsetShadow>
             </View>
             <View className="rounded-[16px] bg-[#262B33] p-4 -mt-2 w-[265px]">
-              <View className="flex flex-row gap-x-6 items-center mb-2">
+              <View className="flex flex-row space-x-6 items-center justify-end mb-2">
+                <View className="flex flex-row items-center space-x-2">
+                  <View>
+                    <BGText
+                      backgroundColor="#C0C0C0"
+                      color="#4D5666"
+                      shadowColor="#00000099"
+                      size={12}
+                    >
+                      متوسط
+                    </BGText>
+                  </View>
+                  <Text className="font-abold text-xs text-white">المستوى</Text>
+                </View>
                 <View className="flex justify-center items-center">
                   <Image source={avatar} className="w-[77px] h-[77px]" />
                   <View className="-mt-[10px]">
@@ -77,29 +90,16 @@ const Status = () => {
                     </SkiaShadow>
                   </View>
                 </View>
-                <View className="flex flex-row items-center gap-2">
-                  <Text className="font-abold text-xs text-white">المستوى</Text>
-                  <View>
-                    <BGText
-                      backgroundColor="#C0C0C0"
-                      color="#4D5666"
-                      shadowColor="#00000099"
-                      size={12}
-                    >
-                      متوسط
-                    </BGText>
-                  </View>
-                </View>
               </View>
               <View className="w-full h-5 bg-[#FDF5E9] rounded p-1">
                 <View className="overflow-hidden w-full h-full bg-[#F9E0BC] rounded relative flex flex-row justify-between items-center px-1">
-                  <View className="bg-[#EFB054] h-full w-[70%] rounded-tr-xl rounded-br-xl absolute top-0 left-0"></View>
-                  <Image source={star} className="w-2 h-2" />
+                  <View className="bg-[#EFB054] h-full w-[70%] rounded-tl-xl rounded-bl-xl absolute top-0 right-0"></View>
+                  <Image source={heart} className="w-2 h-2" />
                   <Text className="font-abold text-white text-[8px]">
                     <Text className="text-[#FFDD82]">2800/</Text>
                     2721
                   </Text>
-                  <Image source={heart} className="w-2 h-2" />
+                  <Image source={star} className="w-2 h-2" />
                 </View>
               </View>
               <Text className="text-[8px] font-abold text-white text-center mt-3 mb-2.5">
@@ -116,11 +116,11 @@ const Status = () => {
               <View className="bg-[#39404D] px-2 py-4 rounded-lg flex flex-row justify-between items-start relative z-10">
                 <View className="gap-2 flex items-center">
                   <Text className="text-[10px] font-aregular text-white">
-                    اللعب والمشترى
+                    التقييم العام
                   </Text>
                   <View>
-                    <BGText backgroundColor="#FFCCD2" color="#F64C4C">
-                      ضغيف
+                    <BGText backgroundColor="#FFEAB3" color="#FFAD0D">
+                      جيد
                     </BGText>
                   </View>
                 </View>
@@ -134,11 +134,11 @@ const Status = () => {
                 </View>
                 <View className="gap-2 flex items-center">
                   <Text className="text-[10px] font-aregular text-white">
-                    التقييم العام
+                    اللعب والمشترى
                   </Text>
                   <View>
-                    <BGText backgroundColor="#FFEAB3" color="#FFAD0D">
-                      جيد
+                    <BGText backgroundColor="#FFCCD2" color="#F64C4C">
+                      ضغيف
                     </BGText>
                   </View>
                 </View>

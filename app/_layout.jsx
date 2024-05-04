@@ -1,10 +1,6 @@
 import React, { useEffect } from "react";
 import { SplashScreen, Stack } from "expo-router";
 import { useFonts } from "expo-font";
-import { I18nManager } from "react-native";
-
-I18nManager.allowRTL(true);
-I18nManager.forceRTL(true);
 
 SplashScreen.preventAutoHideAsync();
 

@@ -9,8 +9,8 @@ const HButton = ({ children, icon }) => {
         activeOpacity={0.9}
         className="bg-[#4D5666] p-3 flex flex-row gap-x-1 rounded-2xl items-center"
       >
-        {icon}
         <Text className="text-xs text-[#262B33] font-aebold">{children}</Text>
+        {icon}
       </TouchableOpacity>
     </SkiaShadow>
   );

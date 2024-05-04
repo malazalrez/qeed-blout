@@ -28,15 +28,9 @@ const Index = () => {
             <View className="bg-[#262B33] pt-[26px] px-2 pb-4 rounded-bl-2xl rounded-br-2xl">
               <View className="flex pb-[31.5px] items-center justify-between flex-row px-6">
                 <HButton
-                  icon={
-                    <MaterialIcons
-                      name="keyboard-arrow-right"
-                      size={16}
-                      color="#262B33"
-                    />
-                  }
+                  icon={<Feather name="search" size={16} color="#262B33" />}
                 >
-                  عودة
+                  بحث
                 </HButton>
                 <TouchableOpacity
                   activeOpacity={0.9}
@@ -47,23 +41,29 @@ const Index = () => {
                   </Text>
                 </TouchableOpacity>
                 <HButton
-                  icon={<Feather name="search" size={16} color="#262B33" />}
+                  icon={
+                    <MaterialIcons
+                      name="keyboard-arrow-right"
+                      size={16}
+                      color="#262B33"
+                    />
+                  }
                 >
-                  بحث
+                  عودة
                 </HButton>
               </View>
               <View className="flex flex-row gap-x-2">
                 <View className="flex-1">
-                  <Select label="نوع الجلسة" />
-                </View>
-                <View className="flex-1">
-                  <Select label="الخصوصية" />
+                  <Select label="نوع اللعب" />
                 </View>
                 <View className="flex-1">
                   <Select label="سرعة اللعب" />
                 </View>
                 <View className="flex-1">
-                  <Select label="نوع اللعب" />
+                  <Select label="الخصوصية" />
+                </View>
+                <View className="flex-1">
+                  <Select label="نوع الجلسة" />
                 </View>
               </View>
             </View>

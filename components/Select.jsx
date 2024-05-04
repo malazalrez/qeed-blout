@@ -6,7 +6,7 @@ const Select = ({ label }) => {
   const emojisWithIcons = ["الكل"];
   return (
     <View>
-      <Text className="text-white font-aregular text-[10px] mb-1">{label}</Text>
+      <Text className="text-white font-aregular text-right text-[10px] mb-1">{label}</Text>
       <SelectDropdown
         data={emojisWithIcons}
         onSelect={(selectedItem, index) => {
